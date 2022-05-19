@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    &__top {
+        &__logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__icon {
+                color: red;
+                font-size: 48px;
+                display: inline-block;
+            }
+            &__title {
+                color: var(--bs-darkblue);
+                display: inline-block;
+                font-size: 32px;
+                span {
+                    font-weight: 300;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
