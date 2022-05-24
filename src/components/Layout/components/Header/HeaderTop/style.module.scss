@@ -1,0 +1,41 @@
+.header {
+    padding: 20px 0;
+    .header__menu__left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header__brand {
+            display: flex;
+            justify-content: space-between;
+            .brand__icon {
+                color: var(--red);
+                font-size: 41px;
+                font-weight: 700;
+            }
+            .header__brand__title {
+                color: var(--brand-color);
+                font-size: 28px;
+                font-weight: 700;
+                margin-left: 8px;
+                span {
+                    font-weight: 300;
+                }
+            }
+        }
+        .header__search {
+            position: relative;
+            width: 530px;
+            margin-left: 38px;
+            @include breakpoint-up($xsmall) {
+                width: 250px;
+                margin-left: 28px;
+            }
+            @include breakpoint-up($small) {
+                width: 300px;
+                margin-left: 24px;
+            }
+        }
+    }
+    .header-menu-right {
+    }
+}

@@ -15,7 +15,11 @@ function App() {
                             <Route
                                 key={idx}
                                 path={route.path}
-                                element={<Pages />}
+                                element={
+                                    <Layout>
+                                        <Pages />
+                                    </Layout>
+                                }
                             />
                         );
                     })}

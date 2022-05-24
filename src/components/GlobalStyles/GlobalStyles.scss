@@ -1,15 +1,17 @@
-@import 'normalize.css';
+@import "normalize.css";
+@import "../../scss/mixins";
 
 :root {
-    --primary: #fe2c55;
+    --red: #ff0000;
     --black: #000;
     --white: #fff;
     --text-color: #161823;
 
     // Default layout
     --default-layout-header-height: 60px;
-    --default-layout-width: 1150px;
+    --default-layout-width: 1140px;
     --default-layout-horizontal-spacer: 24px;
+    --brand-color: #030051;
 }
 
 * {
@@ -23,7 +25,7 @@ html {
 }
 
 body {
-    font-family: 'ProximaNova', sans-serif;
+    font-family: "ProximaNova", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
@@ -69,23 +71,25 @@ a[href] {
 
 // Custom tippy tooltip
 body {
-    .tippy-box {
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        background-color: rgba(84, 84, 84, 0.92);
-    }
-
-    .tippy-arrow {
-        color: rgba(84, 84, 84, 0.92);
-    }
-
-    .tippy-content {
-        padding: 8px 9px;
-    }
-
-    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
-        top: -8px;
+    /* Custom style display here */
+    .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        @include breakpoint-down(xsmall) {
+            max-width: 540px;
+        }
+        @include breakpoint-down(small) {
+            max-width: 720px;
+        }
+        @include breakpoint-down(medium) {
+            max-width: 960px;
+        }
+        @include breakpoint-down(large) {
+            max-width: 1140px;
+        }
+        @include breakpoint-up(xlarge) {
+            max-width: 1320px;
+        }
     }
 }

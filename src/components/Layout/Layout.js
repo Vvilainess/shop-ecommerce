@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../header/Header";
-import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header/index.js";
 
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
-        <BrowserRouter>
+        <>
             <Header />
-        </BrowserRouter>
+            <div>{children}</div>
+        </>
     );
 };
 
